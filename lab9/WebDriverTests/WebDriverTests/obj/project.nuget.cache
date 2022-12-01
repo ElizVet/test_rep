@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qD6/WefnGQRvDh6w1MODcmRlivCEyVpyN9iTxS4xc5hT+zHdyWXpPoSJyuwsKd/DSNKvBqBkKLU6eVdDWVdowA==",
+  "dgSpecHash": "Lq3c/kVdDvs/go2wSWgOik+Uw1lD4/jDpYDeWv9UDFUrnGbbkWBz0y7O9a0WVdj0FTrw0pOiPLE3BIr+RBax9w==",
   "success": true,
   "projectFilePath": "D:\\Desktop\\5sem\\testing\\test_rep\\lab9\\WebDriverTests\\WebDriverTests\\WebDriverTests.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\User\\.nuget\\packages\\nunit\\3.13.1\\nunit.3.13.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\nunit3testadapter\\3.17.0\\nunit3testadapter.3.17.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\selenium.support\\4.6.0\\selenium.support.4.6.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\selenium.webdriver\\4.6.0\\selenium.webdriver.4.6.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

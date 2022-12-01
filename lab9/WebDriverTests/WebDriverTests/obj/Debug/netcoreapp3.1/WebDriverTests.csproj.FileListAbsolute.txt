@@ -101,3 +101,4 @@ D:\Desktop\5sem\testing\test_rep\lab9\WebDriverTests\WebDriverTests\obj\Debug\ne
 D:\Desktop\5sem\testing\test_rep\lab9\WebDriverTests\WebDriverTests\obj\Debug\netcoreapp3.1\WebDriverTests.dll
 D:\Desktop\5sem\testing\test_rep\lab9\WebDriverTests\WebDriverTests\obj\Debug\netcoreapp3.1\WebDriverTests.pdb
 D:\Desktop\5sem\testing\test_rep\lab9\WebDriverTests\WebDriverTests\obj\Debug\netcoreapp3.1\WebDriverTests.genruntimeconfig.cache
+D:\Desktop\5sem\testing\test_rep\lab9\WebDriverTests\WebDriverTests\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
