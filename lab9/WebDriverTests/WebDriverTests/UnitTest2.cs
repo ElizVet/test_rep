@@ -21,12 +21,15 @@ namespace WebDriverTests
             _chromeDriver = new ChromeDriver();
             _chromeDriver.Navigate().GoToUrl("https://www.boho.life/");
             //_chromeDriver.Navigate().GoToUrl("https://www.boho.life/financing");
-            _chromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            _chromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
         }
 
         [Test]
         public void CheckCampersByLocation()
         {
+            // Закрываем всплывающее окно.
+            _chromeDriver.FindElement(By.XPath("//a[@class='sqs-popup-overlay-close']")).Click();
+
             // Находим кнопку для перехода на др страницу. Кликаем. Переходим.
             _chromeDriver.FindElement(By.LinkText("book a trip")).Click();
 

@@ -14,6 +14,9 @@ namespace CorePageObjectTests.Tests
             MainPageObject mainPage = new MainPageObject(_chromeDriver);
             BookTripPageObject bookTripPage = new BookTripPageObject(_chromeDriver);
 
+            // Закрываем всплывающее окно.
+            _chromeDriver.FindElement(By.XPath("//a[@class='sqs-popup-overlay-close']")).Click();
+
             mainPage.ClickOnBookATrip();
 
             bookTripPage.GoToTheNestedIframe();
@@ -30,7 +33,13 @@ namespace CorePageObjectTests.Tests
             MainPageObject mainPage = new MainPageObject(_chromeDriver);
             BookTripPageObject bookTripPage = new BookTripPageObject(_chromeDriver);
 
+            // if need
+            //mainPage.ClosePopUpWindow();
+
             mainPage.ClickOnBookATrip();
+
+            IJavaScriptExecutor js = _chromeDriver as IJavaScriptExecutor;
+            js.ExecuteScript("window.scrollBy(0,950);");
 
             bookTripPage.GoToTheNestedIframe();
             bookTripPage.OpenTheListOfLanguages();
@@ -40,6 +49,5 @@ namespace CorePageObjectTests.Tests
             bool stringContains = GermanCurrency.Contains("€");
             Assert.IsTrue(stringContains);
         }
-
     }
 }

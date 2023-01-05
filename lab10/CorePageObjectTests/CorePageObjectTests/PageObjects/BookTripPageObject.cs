@@ -28,23 +28,35 @@ namespace CorePageObjectTests.PageObjects
             .FindElements(By.XPath("//li[@class='ember-view _Text_kux1gm']"))
             .ToList();
 
-         private IWebElement _languageSelection = _webDriver
-            .FindElement(By.XPath("/html/body/div[5]/div[1]/div/div[1]/div/div/div/div/div"));
+        private IWebElement _languageSelection;
 
-        private IWebElement _GermanyLanguage = _webDriver
-            .FindElement(By.XPath("//*[@id='ember8']/ul/li[7]/a"));
+        private IWebElement _GermanyLanguage;
 
-        private string _stringInGermany = _webDriver
-            .FindElement(By.XPath("//*[@id='ember402']/em"))
-            .Text;
+        private string _stringInGermany;
 
         public void GoToTheNestedIframe() => _webDriver.SwitchTo().Frame(_nestedIframe);
         public void SetActiveTempeLocation() => _checkboxTempeLocation.Click();
         public List<IWebElement> GetListCampersWithLocationTempe() => _listOfCampersWithLocationTempe;
         public List<IWebElement> GetListAllCampers() => _listOfAllCampers;
-        public void OpenTheListOfLanguages() => _languageSelection.Click();
-        public void ChooseGermanyLanguage() => _GermanyLanguage.Click();
-        public string GetStringInGermany() => _stringInGermany;
+        public void OpenTheListOfLanguages()
+        {
+            _languageSelection = _webDriver.FindElement(By.XPath("//div[@class='language-selection']"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)_webDriver;
+            js.ExecuteScript("arguments[0].click();", _languageSelection);
+        }
+        public void ChooseGermanyLanguage()
+        {
+            _GermanyLanguage = _webDriver
+            .FindElement(By.XPath("/html/body/div[5]/div[1]/div/div[1]/div/div/div/div/ul/li[7]/a"));
+            _GermanyLanguage.Click();
+        }
+        public string GetStringInGermany()
+        {
+            _stringInGermany = _webDriver
+                .FindElement(By.XPath("//*[@id='ember429']"))
+                .Text;
+            return _stringInGermany;
+        }
 
     }
 }
